@@ -1,0 +1,16 @@
+; vim: ft=colortemplate fdm=marker cc=22,40,58 et ts=2 sw=2
+; Link: nvim-telescope/telescope.nvim
+
+TelescopeSelection          brightblue      none
+TelescopeSelectionCaret     magenta         none
+TelescopeMultiSelection     brightblue      none
+TelescopeNormal             none            black
+
+TelescopeMatching           green           none
+TelescopePromptPrefix       blue            none
+
+; Border highlight groups
+TelescopeBorder             brightwhite     none
+TelescopePromptBorder   -> TelescopeBorder
+TelescopeResultsBorder  -> TelescopeBorder
+TelescopePreviewBorder  -> TelescopeBorder

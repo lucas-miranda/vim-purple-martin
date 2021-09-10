@@ -1,0 +1,216 @@
+; vim: ft=colortemplate fdm=marker cc=22,40,58 et ts=2 sw=2
+
+; Information {{{
+Full name:      Purple Martin
+Short name:     purple_martin
+Author:         Lucas A. Miranda <miranda.a.lucas@gmail.com>
+URL:            https://github.com/lucas-miranda/purple_martin
+Description:    A color scheme with a purple touch.
+Version:        1.0
+License:        MIT
+Neovim:         yes
+; }}}
+
+; Documentation {{{
+Include: _help.colortemplate
+; }}}
+
+; Common linked groups {{{
+Boolean           -> Constant
+Character         -> String
+Debug             -> Special
+Define            -> PreProc
+ErrorMsg          -> Error
+Float             -> Number
+Include           -> PreProc
+Label             -> Statement
+PreCondit         -> PreProc
+SpecialChar       -> Special
+SpecialComment    -> Special
+StorageClass      -> Structure
+Tag               -> Special
+
+PopupSelected     -> PmenuSel
+QuickFixLine      -> Search
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
+
+lCursor           -> Cursor
+; }}}
+
+Background: dark
+
+; Color palette {{{
+; Color name            GUI            Base256     Base16 (optional)
+Color: black            #07010B        232         Black
+Color: blue             #B764EC        135         DarkBlue
+Color: green            #86D355        113         DarkGreen
+Color: cyan             #11AFFF         39         DarkCyan
+Color: red              #D36355        167         DarkRed
+Color: magenta          #FD85E7        212         DarkMagenta
+Color: yellow           #E2E231        184         DarkYellow
+Color: brightwhite      #8B8E8E        245         Grey
+Color: brightblack      #464C54        238         DarkGrey
+Color: brightblue       #C6A7FF        183         Blue
+Color: brightgreen      #51E773         78         Green
+Color: brightcyan       #34E9ED         44         Cyan
+Color: brightred        #FFBA30        214         Red
+Color: brightmagenta    #8A82FD        105         Magenta
+Color: brightyellow     #E1F957        191         Yellow
+Color: white            #ECF2FB        254         White
+
+; Additional colors to GUI and Base256
+Color: darkwhite        #C4C8CE        251         Grey
+Color: lightblack       #1D1723        234         DarkGrey
+; }}}
+
+; Terminal colors {{{
+Term colors: black red green yellow blue magenta cyan white
+Term colors: brightblack brightred brightgreen brightyellow
+Term colors: brightblue brightmagenta brightcyan brightwhite
+; }}}
+
+; Default highlight groups {{{
+Variant: gui
+#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
+Variant: 256 16 8
+#if get(g:, '@optionprefix_transp_bg', 0)
+Variant: gui 256 16 8
+    Normal           white             none
+    Terminal         white             none
+#else
+    Normal           white             black
+    Terminal         white             black
+#endif
+
+; Group              Foreground        Background        Attributes
+ColorColumn          none              none
+Conceal              brightblack       none
+Conditional          magenta           none
+Cursor               none              none              reverse
+CursorColumn         none              none
+CursorLine           none              lightblack
+CursorLineNr         brightblue        none
+Delimiter            brightwhite       none
+DiffAdd              black             green
+DiffChange           black             cyan
+DiffDelete           black             red
+DiffText             none              none             bold
+Directory            white             black
+EndOfBuffer          white             black
+Exception            brightcyan        none
+FoldColumn           white             black
+Folded               white             black             italic
+Function             brightmagenta     none
+IncSearch            white             black             t=reverse g=standout
+Keyword              brightcyan        none
+LineNr               brightblack       none
+MatchParen           none              none              bold
+ModeMsg              white             black
+MoreMsg              white             black
+NonText              brightblack       black
+Number               brightred         none
+Operator             brightwhite       none
+Pmenu                darkwhite         lightblack
+PmenuSel             lightblack        brightblue
+PmenuSbar            brightmagenta     brightblack
+PmenuThumb           brightcyan        brightblack
+Question             white             brightblack
+Repeat               magenta           none
+Search               black             cyan
+SignColumn           white             none
+SpecialKey           brightwhite       none
+SpellBad             none              none              s=red undercurl
+SpellCap             none              none              s=blue undercurl
+SpellLocal           none              none              s=magenta undercurl
+SpellRare            none              none              s=cyan reverse,undercurl
+StatusLine           none              brightblack
+StatusLineNC         none              black
+String               green             none
+Structure            brightcyan        none
+TabLine              brightblack       black
+TabLineFill          none              black
+TabLineSel           blue              white
+Title                brightblack       black
+VertSplit            brightblack       none
+Visual               black             brightblue
+VisualNOS            black             magenta
+WarningMsg           black             yellow
+WildMenu             brightblue        black
+
+; Other conventional group names (see `:help group-name`)
+Comment              brightblack       none
+Constant             cyan              none
+Error                black             red
+Identifier           white             none
+Ignore               white             black
+Macro                brightmagenta     none
+PreProc              brightwhite       none
+Special              brightgreen       none
+Statement            brightcyan        none
+Todo                 brightblue        none              bold
+Type                 blue              none              bold
+Typedef              cyan              none              bold
+Underlined           none              none              s=yellow italic,underline
+CursorIM             none              none              inverse
+ToolbarLine          none              black
+ToolbarButton        white             black             bold
+; }}}
+
+; Plugins Highlights
+; ------------- "
+
+; nvim-telescope/telescope.nvim {{{
+Include: plugin/telescope.colortemplate
+; }}}
+
+verbatim
+
+" Terminal
+" ------------- "
+
+if has('nvim')
+  let g:terminal_color_0 = '@guiblack'
+  let g:terminal_color_1 = '@guired'
+  let g:terminal_color_2 = '@guigreen'
+  let g:terminal_color_3 = '@guiyellow'
+  let g:terminal_color_4 = '@guiblue'
+  let g:terminal_color_5 = '@guimagenta'
+  let g:terminal_color_6 = '@guicyan'
+  let g:terminal_color_7 = '@guiwhite'
+  let g:terminal_color_8 = '@guibrightblack'
+  let g:terminal_color_9 = '@guibrightred'
+  let g:terminal_color_10 = '@guibrightgreen'
+  let g:terminal_color_11 = '@guibrightyellow'
+  let g:terminal_color_12 = '@guibrightblue'
+  let g:terminal_color_13 = '@guibrightmagenta'
+  let g:terminal_color_14 = '@guibrightcyan'
+  let g:terminal_color_15 = '@guibrightwhite'
+  let g:terminal_color_background = '@guiblack'
+  let g:terminal_color_foreground = '@guiwhite'
+else
+  let g:terminal_ansi_colors = [
+      \ '@guiblack',
+      \ '@guired',
+      \ '@guigreen',
+      \ '@guiyellow',
+      \ '@guiblue',
+      \ '@guimagenta',
+      \ '@guicyan',
+      \ '@guiwhite',
+      \ '@guibrightblack',
+      \ '@guibrightred',
+      \ '@guibrightgreen',
+      \ '@guibrightyellow',
+      \ '@guibrightblue',
+      \ '@guibrightmagenta',
+      \ '@guibrightcyan',
+      \ '@guibrightwhite'
+  \ ]
+endif
+
+endverbatim
+
+; B/W variant {{{
+Include: _bw.colortemplate
+; }}}

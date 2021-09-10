@@ -1,0 +1,22 @@
+*purple_martin.txt*	For Vim version 8.0	Last change: 2021 Sep 10
+
+
+	Purple Martin color scheme
+
+
+	A color scheme with a purple touch.
+	Author: Lucas <https://github.com/lucas-miranda>
+	License: MIT
+
+==============================================================================
+Color scheme options					purple_martin-options*
+
+						*g:purple_martin_transp_bg*
+Set to 1 if you want a transparent background. Takes effect only in the
+terminal.
+>
+	let g:purple_martin_transp_bg = 0
+<
+
+ vim:tw=78:ts=8:noet:ft=help:norl:
+
