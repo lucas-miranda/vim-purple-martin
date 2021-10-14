@@ -10,6 +10,7 @@ Built targeting true color, but supports 256, 16 or 8, if needed.
 Contains explicit support to the following plugins:
 
 - [nvim-telescope/telescope.nvim](https://github.com/wbthomason/packer.nvim)
+- [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 
 ## Installation
 

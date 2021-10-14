@@ -164,6 +164,10 @@ ToolbarButton        white             black             bold
 Include: plugin/telescope.colortemplate
 ; }}}
 
+; hrsh7th/nvim-cmp {{{
+Include: plugin/nvim-cmp.colortemplate
+; }}}
+
 verbatim
 
 " Terminal

@@ -1,0 +1,6 @@
+; vim: ft=colortemplate fdm=marker cc=22,40,58 et ts=2 sw=2
+; Link: hrsh7th/nvim-cmp
+
+CmpItemAbbr                 brightwhite     none
+CmpItemAbbrMatch            white           none        bold
+CmpItemKind                 blue            none
