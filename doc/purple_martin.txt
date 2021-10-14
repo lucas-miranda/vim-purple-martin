@@ -1,4 +1,4 @@
-*purple_martin.txt*	For Vim version 8.0	Last change: 2021 Sep 10
+*purple_martin.txt*	For Vim version 8.0	Last change: 2021 Sep 23
 
 
 	Purple Martin color scheme

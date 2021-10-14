@@ -131,7 +131,7 @@ Structure            brightcyan        none
 TabLine              brightblack       black
 TabLineFill          none              black
 TabLineSel           blue              white
-Title                brightblack       black
+Title                blue              none
 VertSplit            brightblack       none
 Visual               black             brightblue
 VisualNOS            black             magenta
@@ -151,7 +151,7 @@ Statement            brightcyan        none
 Todo                 brightblue        none              bold
 Type                 blue              none              bold
 Typedef              cyan              none              bold
-Underlined           none              none              s=yellow italic,underline
+Underlined           none              none              s=brightgreen italic,underline
 CursorIM             none              none              inverse
 ToolbarLine          none              black
 ToolbarButton        white             black             bold
